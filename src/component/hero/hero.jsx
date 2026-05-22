@@ -1,4 +1,5 @@
 import "./hero.css"
+import resume from "../../assets/resume.pdf";
 function Hero(){
     return(
         <section className = "hero">
@@ -12,9 +13,23 @@ function Hero(){
                     programming.
                 </p>
                 <div className="hero-btn">
-                <button className="btn">Contact Me</button>
-                <button className="btn-outline">Download resume</button>
+                <a href="#contact" className="btn">
+                    Contact Me
+                </a>
+
+                <a
+                    href={resume}
+                    className="btn-outline"
+                    target="_blank"
+                    rel="noreferrer"
+                >
+                    My Resume
+                </a>
+                <a href={resume} download className="btn-outline">
+                ⬇ Download Resume
+                </a>
                 </div>
+                
             </div>
             <div className="hero-image">
                 <img src="https://plus.unsplash.com/premium_vector-1711987810156-4793e4aa786e?q=80&w=1288&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
