@@ -1,0 +1,71 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #0d1117;
+  overflow-x: hidden;
+}
+
+
+
+body::before {
+  content: "";
+  position: fixed;
+  width: 500px;
+  height: 500px;
+  background: rgba(77,166,255,0.15);
+  filter: blur(120px);
+  top: -100px;
+  left: -100px;
+  z-index: -1;
+  animation: glowMove 8s ease-in-out infinite alternate;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  width: 400px;
+  height: 400px;
+  background: rgba(120,119,198,0.12);
+  filter: blur(120px);
+  bottom: -100px;
+  right: -100px;
+  z-index: -1;
+  animation: glowMove2 10s ease-in-out infinite alternate;
+}
+
+@keyframes glowMove {
+  from {
+    transform: translate(0,0);
+  }
+  to {
+    transform: translate(80px,60px);
+  }
+}
+
+@keyframes glowMove2 {
+  from {
+    transform: translate(0,0);
+  }
+  to {
+    transform: translate(-80px,-60px);
+  }
+}
+
+
+
+section {
+  animation: fadeUp 1s ease;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
