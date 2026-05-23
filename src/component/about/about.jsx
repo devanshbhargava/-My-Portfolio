@@ -1,4 +1,4 @@
-import "./About.css";
+import "./about.css";
 
 const About = () => {
   return (
@@ -26,7 +26,6 @@ const About = () => {
         </div>
 
         <div className="about-right">
-
           <div className="about-card">
             <h3>Education</h3>
 
@@ -51,8 +50,8 @@ const About = () => {
             <h3>Current Focus</h3>
             <p>React • DSA • Full Stack Development</p>
           </div>
-
         </div>
+
       </div>
     </section>
   );
